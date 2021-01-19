@@ -10,10 +10,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
+      home: Scaffold(
+          appBar: AppBar(
+            title: Center(
+              child: Text(
+                'MI CARD',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                ),
+              ),
+            ),
+            backgroundColor: Colors.teal.shade900,
+          ),
           backgroundColor: Colors.teal,
           body: SafeArea(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 CircleAvatar(
                   radius: 50.0,
@@ -36,6 +48,48 @@ class MyApp extends StatelessWidget {
                     letterSpacing: 1.0,
                   ),
                 ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Card(
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 15.0),
+                  child:ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    title:Text(
+                      '+92 303 2050778',
+                      style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontSize: 16.0,
+                          fontFamily: 'SourceSansPro'
+                      ),
+                    ),
+                  ),
+                ),
+                Card(
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 15.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      'noman.khalid.freelance@gmail.com',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        color: Colors.teal.shade900,
+                        fontFamily: 'SourceSansPro',
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 40.0,
+                ),
               ],
             ),
           )
@@ -43,3 +97,4 @@ class MyApp extends StatelessWidget {
       );
   }
 }
+
